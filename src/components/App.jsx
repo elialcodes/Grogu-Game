@@ -27,19 +27,28 @@ function App() {
       setGroguPosition(positionGrogu + 1);
       setDiceResult(`Resultado: 4,${name} Grogu ha avanzado una casilla`);
     }
-    if (randomNumber === 1) {
+    if (randomNumber === 1 && cookies.length !== 0) {
       setCookies(cookies.slice(1));
       setDiceResult(`Resultado: 1,${name} has ayudado a Mando a descargar una galleta`);
     }
+    if (randomNumber === 1 && cookies.length === 0) {
+      setDiceResult(`Resultado: 1,${name} lo siento, no quedan galletas...`);
+    }
 
-    if (randomNumber === 2) {
+    if (randomNumber === 2 && eggs.length !== 0) {
       setEggs(eggs.slice(1));
       setDiceResult(`Resultado: 2,${name} has ayudado a Mando a descargar un huevo`);
     }
+    if (randomNumber === 2 && eggs.length === 0) {
+      setDiceResult(`Resultado: 2,${name} lo siento, no quedan huevos...`);
+    }
 
-    if (randomNumber === 3) {
+    if (randomNumber === 3 && frogs.length !== 0) {
       setFrogs(frogs.slice(1));
       setDiceResult(`Resultado: 3,${name} has ayudado a Mando a descargar una rana`);
+    }
+    if (randomNumber === 3 && frogs.length === 0) {
+      setDiceResult(`Resultado: 3,${name} lo siento, no quedan ranas...`);
     }
   };
 
