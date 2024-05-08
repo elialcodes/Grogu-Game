@@ -87,7 +87,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="game">
       <Header name={name} onChangeSetName={onChangeSetName} />
       <Form onChangeSetName={onChangeSetName} />
       <main className="page">
