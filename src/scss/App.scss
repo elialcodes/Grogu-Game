@@ -4,22 +4,36 @@ html {
   height: 100%;
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: url('../images/grogu.webp') no-repeat center center fixed;
-  background-size: cover;
+}
+
+.mainContainer {
+  display: flex;
+}
+
+.imageGrogu {
+  width: 60%;
+  height: 100vh;
+  background: url('../images/grogu-vertical.jpeg') no-repeat;
+  background-size: auto 100%;
+}
+
+.game {
+  width: 40%;
+  background-color: #999;
 }
 
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   height: 100%;
-  color: #fff;
+  color: white;
 }
 
 @keyframes bounce {
   to {
-    transform: translateY(-20%);
+    transform: translateY(+15%);
   }
 }
 
@@ -41,7 +55,7 @@ html {
 }
 
 .game-status {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000;
   margin-bottom: 10px;

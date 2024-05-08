@@ -87,30 +87,33 @@ function App() {
   };
 
   return (
-    <div className="game">
-      <Header name={name} onChangeSetName={onChangeSetName} />
-      <Form onChangeSetName={onChangeSetName} />
-      <main className="page">
-        <Board positionGrogu={positionGrogu} />
-        <div>{diceResult}</div>
-        <Dice handleDice={rollDice} stateGame={stateGame} />
-        <GameStatus stateGame={stateGame} />
-        <section className="goods-container">
-          <div className="goods-item">{cookies}</div>
-        </section>
-        <section className="goods-container">
-          <div className="goods-item">{eggs}</div>
-        </section>
-        <section className="goods-container">
-          <div className="goods-item">{frogs}</div>
-        </section>
-        <section>
-          <button className="restart-button" onClick={handleReset}>
-            Reiniciar Juego
-          </button>
-        </section>
-      </main>
-      <Footer />
+    <div className="mainContainer">
+      <div className="imageGrogu">{/* <img src={Grogu} alt="Grogu" /> */}</div>
+      <div className="game">
+        <Header name={name} onChangeSetName={onChangeSetName} />
+        <main className="page">
+          <Form onChangeSetName={onChangeSetName} />
+          <Board positionGrogu={positionGrogu} />
+          <div>{diceResult}</div>
+          <Dice handleDice={rollDice} stateGame={stateGame} />
+          <GameStatus stateGame={stateGame} />
+          <section className="goods-container">
+            <div className="goods-item">{cookies}</div>
+          </section>
+          <section className="goods-container">
+            <div className="goods-item">{eggs}</div>
+          </section>
+          <section className="goods-container">
+            <div className="goods-item">{frogs}</div>
+          </section>
+          <section>
+            <button className="restart-button" onClick={handleReset}>
+              Reiniciar Juego
+            </button>
+          </section>
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
