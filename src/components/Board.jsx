@@ -1,4 +1,5 @@
 import Grogu from './Grogu';
+import PropTypes from 'prop-types';
 import '../scss/components/Board.scss';
 
 const Board = ({ positionGrogu }) => {
@@ -14,6 +15,10 @@ const Board = ({ positionGrogu }) => {
   };
 
   return <section className="board">{renderCells()}</section>;
+};
+
+Board.propTypes = {
+  positionGrogu: PropTypes.number.isRequired,
 };
 
 export default Board;

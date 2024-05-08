@@ -13,7 +13,7 @@ function Form({ name, onChangeSetName }) {
   );
 }
 Form.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   onChangeSetName: PropTypes.func.isRequired,
 };
 export default Form;
