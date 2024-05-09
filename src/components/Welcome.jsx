@@ -1,4 +1,4 @@
-function Options() {
+function Welcome() {
   return (
     <div>
       Bienvenidos a este fácil y sencillo juego donde sólo tienes que tener suerte. Madalorian es el
@@ -10,4 +10,4 @@ function Options() {
   );
 }
 
-export default Options;
+export default Welcome;

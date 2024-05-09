@@ -1,22 +1,16 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import App from './App';
-import Wellcome from './Wellcome';
+import Welcome from './Welcome';
 import Instructions from './Instructions';
 
 function Footer() {
   return (
     <>
-      <Routes>
-        <Route path="/options" element={<Wellcome />} />
-        <Route path="/instructions" element={<Instructions />} />
-        <Route path="/game-play" element={<App />} />
-      </Routes>
-
       <footer className="footer">
         <nav>
           <ul>
             <li className="footer__menu-item">
-              <Link className="footer__menu-link" to="/options">
+              <Link className="footer__menu-link" to="/welcome">
                 Bienvenida
               </Link>
             </li>
@@ -34,6 +28,11 @@ function Footer() {
           </ul>
         </nav>
       </footer>
+      <Routes>
+        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/instructions" element={<Instructions />} />
+        <Route path="/game-play" element={<App />} />
+      </Routes>
     </>
   );
 }
