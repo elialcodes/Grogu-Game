@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-function Dice({ handleDice, stateGame }) {
+function Dice({ handleRollDice, stateGame }) {
   const handleClick = () => {
-    handleDice();
+    handleRollDice();
   };
 
   const isDisabled = stateGame === 'Has ganado!!!' || stateGame === 'Has perdido...';
@@ -17,7 +17,7 @@ function Dice({ handleDice, stateGame }) {
 }
 
 Dice.propTypes = {
-  handleDice: PropTypes.func.isRequired,
+  handleRollDice: PropTypes.func.isRequired,
   resultRandomNumber: PropTypes.number,
   stateGame: PropTypes.string,
 };

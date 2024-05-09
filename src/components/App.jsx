@@ -1,11 +1,12 @@
 import '../scss/App.scss';
 import { useState, useEffect } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 import Header from './Header';
-import GameStatus from './GameStatus';
-import Board from './Board';
-import Dice from './Dice';
-import Form from './Form';
-import Footer from './Footer';
+import Game from './Game';
+import Welcome from './Welcome';
+import Instructions from './Instructions';
+
+// import Begin from './Begin';
 
 function App() {
   const [name, setName] = useState('');
@@ -16,11 +17,11 @@ function App() {
   const [diceResult, setDiceResult] = useState('');
   const [stateGame, setStateGame] = useState('Inicio');
 
-  const onChangeSetName = (value) => {
+  const handleSetName = (value) => {
     setName(value);
   };
 
-  const rollDice = () => {
+  const handleRollDice = () => {
     const randomNumber = Math.floor(Math.random() * 4) + 1;
 
     if (randomNumber === 4) {
@@ -88,35 +89,43 @@ function App() {
 
   return (
     <div className="mainContainer">
-      <div className="imageGrogu"></div>
-      <div className="game">
-        <Header name={name} onChangeSetName={onChangeSetName} />
+      <div className="imageContainer"></div>
+      <div className="noImageContainer">
+        <Header name={name} />
         <main className="page">
-          <div className="gameElements1">
-            <Board positionGrogu={positionGrogu} />
-          </div>
-          <div className="gameElements2">
-            <Form onChangeSetName={onChangeSetName} />
-            <div>{diceResult}</div>
-            <Dice handleDice={rollDice} stateGame={stateGame} />
-            <GameStatus stateGame={stateGame} />
-            <section className="goods-container">
-              <div className="goods-item">{cookies}</div>
-            </section>
-            <section className="goods-container">
-              <div className="goods-item">{eggs}</div>
-            </section>
-            <section className="goods-container">
-              <div className="goods-item">{frogs}</div>
-            </section>
-            <section>
-              <button className="restart-button" onClick={handleReset}>
-                Reiniciar Juego
-              </button>
-            </section>
-          </div>
+          <ul className="menu">
+            <li>
+              <Link to="/welcome">Bienvenida</Link>
+            </li>
+
+            <li>
+              <Link to="/instructions">Instrucciones</Link>
+            </li>
+            <li>
+              <Link to="/game">A jugar</Link>
+            </li>
+          </ul>
         </main>
-        <Footer />
+        <Routes>
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/instructions" element={<Instructions />} />
+          <Route
+            path="/game"
+            element={
+              <Game
+                handleSetName={handleSetName}
+                positionGrogu={positionGrogu}
+                cookies={cookies}
+                eggs={eggs}
+                frogs={frogs}
+                diceResult={diceResult}
+                stateGame={stateGame}
+                handleRollDice={handleRollDice}
+                handleReset={handleReset}
+              />
+            }
+          />
+        </Routes>
       </div>
     </div>
   );

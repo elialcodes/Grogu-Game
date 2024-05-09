@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
-function Form({ name, onChangeSetName }) {
-  const handleChangeName = (event) => {
+function Form({ name, handleSetName }) {
+  const handleChangeSetName = (event) => {
     const valueName = event.target.value;
-    onChangeSetName(valueName);
+    handleSetName(valueName);
   };
 
   return (
     <form action="">
       <label htmlFor="name">Introduce tu nombre</label>
-      <input type="text" id="name" value={name} onChange={handleChangeName} />
+      <input type="text" id="name" value={name} onChange={handleChangeSetName} />
     </form>
   );
 }
 Form.propTypes = {
   name: PropTypes.string,
-  onChangeSetName: PropTypes.func.isRequired,
+  handleSetName: PropTypes.func.isRequired,
 };
 export default Form;
