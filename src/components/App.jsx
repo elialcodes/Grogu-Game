@@ -25,33 +25,33 @@ function App() {
 
     if (randomNumber === 4) {
       setGroguPosition(positionGrogu + 1);
-      setDiceResult(`Resultado: 4,${name} Grogu ha avanzado una casilla`);
+      setDiceResult(`4, Grogu ha avanzado una casilla`);
     }
 
     if (randomNumber === 1) {
       if (cookies.length !== 0) {
         setCookies(cookies.slice(1));
-        setDiceResult(`Resultado: 1,${name} has ayudado a Mando a descargar una galleta`);
+        setDiceResult(`1, ${name} has descargado una galleta`);
       } else {
-        setDiceResult(`Resultado: 1,${name} lo siento, no quedan galletas...`);
+        setDiceResult(`1, ${name} lo siento, no quedan galletas...`);
       }
     }
 
     if (randomNumber === 2) {
       if (eggs.length !== 0) {
         setEggs(eggs.slice(1));
-        setDiceResult(`Resultado: 2,${name} has ayudado a Mando a descargar un huevo`);
+        setDiceResult(`2, ${name} has descargado un huevo`);
       } else {
-        setDiceResult(`Resultado: 2,${name} lo siento, no quedan huevos...`);
+        setDiceResult(`2, ${name} lo siento, no quedan huevos...`);
       }
     }
 
     if (randomNumber === 3) {
       if (frogs.length !== 0) {
         setFrogs(frogs.slice(1));
-        setDiceResult(`Resultado: 3,${name} has ayudado a Mando a descargar una rana`);
+        setDiceResult(`3, ${name} has descargado una rana`);
       } else {
-        setDiceResult(`Resultado: 3,${name} lo siento, no quedan ranas...`);
+        setDiceResult(`3, ${name} lo siento, no quedan ranas...`);
       }
     }
   };
@@ -88,29 +88,33 @@ function App() {
 
   return (
     <div className="mainContainer">
-      <div className="imageGrogu">{/* <img src={Grogu} alt="Grogu" /> */}</div>
+      <div className="imageGrogu"></div>
       <div className="game">
         <Header name={name} onChangeSetName={onChangeSetName} />
         <main className="page">
-          <Form onChangeSetName={onChangeSetName} />
-          <Board positionGrogu={positionGrogu} />
-          <div>{diceResult}</div>
-          <Dice handleDice={rollDice} stateGame={stateGame} />
-          <GameStatus stateGame={stateGame} />
-          <section className="goods-container">
-            <div className="goods-item">{cookies}</div>
-          </section>
-          <section className="goods-container">
-            <div className="goods-item">{eggs}</div>
-          </section>
-          <section className="goods-container">
-            <div className="goods-item">{frogs}</div>
-          </section>
-          <section>
-            <button className="restart-button" onClick={handleReset}>
-              Reiniciar Juego
-            </button>
-          </section>
+          <div className="gameElements1">
+            <Board positionGrogu={positionGrogu} />
+          </div>
+          <div className="gameElements2">
+            <Form onChangeSetName={onChangeSetName} />
+            <div>{diceResult}</div>
+            <Dice handleDice={rollDice} stateGame={stateGame} />
+            <GameStatus stateGame={stateGame} />
+            <section className="goods-container">
+              <div className="goods-item">{cookies}</div>
+            </section>
+            <section className="goods-container">
+              <div className="goods-item">{eggs}</div>
+            </section>
+            <section className="goods-container">
+              <div className="goods-item">{frogs}</div>
+            </section>
+            <section>
+              <button className="restart-button" onClick={handleReset}>
+                Reiniciar Juego
+              </button>
+            </section>
+          </div>
         </main>
         <Footer />
       </div>

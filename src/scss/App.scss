@@ -11,24 +11,32 @@ html {
 }
 
 .imageGrogu {
-  width: 60%;
+  width: 50%;
   height: 100vh;
   background: url('../images/grogu-vertical.jpeg') no-repeat;
-  background-size: auto 100%;
+  background-size: 100% auto;
 }
 
 .game {
-  width: 40%;
+  width: 50%;
   background-color: #999;
 }
 
 .page {
+  padding: 5%;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  gap: 10%;
+  height: 70vh;
+  color: white;
+}
+
+.gameElements2 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  height: 100%;
-  color: white;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 @keyframes bounce {
@@ -93,7 +101,6 @@ html {
 h1 {
   font-size: 2.5rem;
   text-shadow: 2px 2px 5px #000;
-  margin-bottom: 20px;
 }
 
 /* Contadores de mercancías */

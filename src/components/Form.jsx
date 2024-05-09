@@ -7,7 +7,7 @@ function Form({ name, onChangeSetName }) {
 
   return (
     <form action="">
-      <label htmlFor="name">Introduce tu nombre para jugar</label>
+      <label htmlFor="name">Introduce tu nombre</label>
       <input type="text" id="name" value={name} onChange={handleChangeName} />
     </form>
   );
