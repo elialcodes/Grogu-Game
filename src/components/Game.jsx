@@ -21,9 +21,9 @@ function Game({
       <Board className="gameBoard" positionGrogu={positionGrogu} />
       <div className="gameElements">
         <Form handleSetName={handleSetName} />
-        <div>{diceResult}</div>
-        <Dice handleRollDice={handleRollDice} stateGame={stateGame} />
         <GameStatus stateGame={stateGame} />
+        <Dice handleRollDice={handleRollDice} stateGame={stateGame} />
+        <div>{diceResult}</div>
         <section className="goods-container">
           <div className="goods-item">{cookies}</div>
         </section>
@@ -48,11 +48,11 @@ Game.propTypes = {
   cookies: PropTypes.array,
   eggs: PropTypes.array,
   frogs: PropTypes.array,
-  diceResult: PropTypes.number,
+  diceResult: PropTypes.string,
   stateGame: PropTypes.string,
-  handleSetName: PropTypes.function,
-  handleRollDice: PropTypes.function,
-  handleReset: PropTypes.function,
+  handleSetName: PropTypes.func,
+  handleRollDice: PropTypes.func,
+  handleReset: PropTypes.func,
 };
 
 export default Game;

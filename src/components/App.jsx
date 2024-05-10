@@ -6,8 +6,6 @@ import Game from './Game';
 import Welcome from './Welcome';
 import Instructions from './Instructions';
 
-// import Begin from './Begin';
-
 function App() {
   const [name, setName] = useState('');
   const [positionGrogu, setGroguPosition] = useState(0);
@@ -57,6 +55,19 @@ function App() {
     }
   };
 
+  const handleReset = () => {
+    handleSetName;
+    setGroguPosition(0);
+    setCookies(['🍪', '🍪', '🍪']);
+    setEggs(['🥚', '🥚', '🥚']);
+    setFrogs(['🐸', '🐸', '🐸']);
+    setDiceResult('Resultado:');
+    setStateGame('Inicio');
+    setTimeout(() => {
+      setStateGame('Inicio');
+    }, 100);
+  };
+
   useEffect(() => {
     if (positionGrogu < 6 || cookies.length !== 3 || eggs.length !== 3 || frogs.length !== 3) {
       setStateGame('En curso');
@@ -76,16 +87,6 @@ function App() {
       setStateGame(`Has perdido...`);
     }
   }, [positionGrogu]);
-
-  const handleReset = () => {
-    setName('');
-    setGroguPosition(0);
-    setCookies(['🍪', '🍪', '🍪']);
-    setEggs(['🥚', '🥚', '🥚']);
-    setFrogs(['🐸', '🐸', '🐸']);
-    setDiceResult('Resultado:');
-    setStateGame('Inicio');
-  };
 
   return (
     <div className="mainContainer">

@@ -1,15 +1,11 @@
 import PropTypes from 'prop-types';
 
 function Dice({ handleRollDice, stateGame }) {
-  const handleClick = () => {
-    handleRollDice();
-  };
-
   const isDisabled = stateGame === 'Has ganado!!!' || stateGame === 'Has perdido...';
 
   return (
     <>
-      <button className="dice" onClick={handleClick} disabled={isDisabled}>
+      <button className="dice" onClick={handleRollDice} disabled={isDisabled}>
         🎲
       </button>
     </>
