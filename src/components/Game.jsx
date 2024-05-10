@@ -21,18 +21,22 @@ function Game({
       <Board className="gameBoard" positionGrogu={positionGrogu} />
       <div className="gameElements">
         <Form handleSetName={handleSetName} />
-        <GameStatus stateGame={stateGame} />
-        <Dice handleRollDice={handleRollDice} stateGame={stateGame} />
+        <div className="diceAndStatus">
+          <Dice handleRollDice={handleRollDice} stateGame={stateGame} />
+          <GameStatus stateGame={stateGame} />
+        </div>
         <div>{diceResult}</div>
-        <section className="goods-container">
-          <div className="goods-item">{cookies}</div>
-        </section>
-        <section className="goods-container">
-          <div className="goods-item">{eggs}</div>
-        </section>
-        <section className="goods-container">
-          <div className="goods-item">{frogs}</div>
-        </section>
+        <div className="goods-count">
+          <section className="goods-container">
+            <div className="goods-item">{cookies}</div>
+          </section>
+          <section className="goods-container">
+            <div className="goods-item">{eggs}</div>
+          </section>
+          <section className="goods-container">
+            <div className="goods-item">{frogs}</div>
+          </section>
+        </div>
         <section>
           <button className="restart-button" onClick={handleReset}>
             Reiniciar Juego

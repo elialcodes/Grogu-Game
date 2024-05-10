@@ -1,20 +1,30 @@
+.gameBoard {
+  width: 50%;
+}
+
 .board {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 10px;
   margin-bottom: 30px;
-}
 
-.cell {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border: lightgrey 0.2px solid;
+  .cell {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: lightgrey 0.2px solid;
+  }
+
+  @keyframes bounce {
+    to {
+      transform: translateY(+15%);
+    }
+  }
 }

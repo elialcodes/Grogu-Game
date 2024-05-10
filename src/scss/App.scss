@@ -10,19 +10,19 @@ html {
     height: 100vh;
 
     .imageContainer {
-      width: 60%;
+      width: 50%;
       height: 100vh;
       background: url('../images/grogu-vertical.jpeg') no-repeat;
       background-size: 120% 100vh;
     }
 
     .noImageContainer {
-      width: 40%;
+      width: 50%;
       height: 100vh;
-      background-color: #999;
+      background-color: rgb(49, 177, 130);
+      border-left: 10px solid black;
 
       .page {
-        background-color: #999;
         padding: 4vh 5%;
         color: white;
       }
