@@ -25,19 +25,19 @@ html {
       .page {
         padding: 4vh 5%;
         color: white;
-      }
 
-      .menu {
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
-        gap: 5%;
+        .menu {
+          list-style: none;
+          display: flex;
+          justify-content: space-evenly;
+          gap: 5%;
 
-        a {
-          text-decoration: none;
-          color: white;
-          font-size: 20px;
-          line-height: 50px;
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            line-height: 50px;
+          }
         }
       }
 

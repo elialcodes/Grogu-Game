@@ -18,7 +18,9 @@ function Game({
 }) {
   return (
     <div className="game">
-      <Board className="gameBoard" positionGrogu={positionGrogu} />
+      <div className="gameBoard">
+        <Board positionGrogu={positionGrogu} />
+      </div>
       <div className="gameElements">
         <Form handleSetName={handleSetName} />
         <div className="diceAndStatus">

@@ -12,7 +12,7 @@ function App() {
   const [cookies, setCookies] = useState(['🍪', '🍪', '🍪']);
   const [eggs, setEggs] = useState(['🥚', '🥚', '🥚']);
   const [frogs, setFrogs] = useState(['🐸', '🐸', '🐸']);
-  const [diceResult, setDiceResult] = useState('Resultado:');
+  const [diceResult, setDiceResult] = useState('Mercancías:');
   const [stateGame, setStateGame] = useState('Inicio');
 
   const handleSetName = (value) => {
@@ -24,33 +24,33 @@ function App() {
 
     if (randomNumber === 4) {
       setGroguPosition(positionGrogu + 1);
-      setDiceResult(`4, Grogu avanza una casilla`);
+      setDiceResult(`4 - Grogu avanza una casilla`);
     }
 
     if (randomNumber === 1) {
       if (cookies.length !== 0) {
         setCookies(cookies.slice(1));
-        setDiceResult(`1, ${name} descargas una galleta`);
+        setDiceResult(`1 - ${name} descargas una galleta`);
       } else {
-        setDiceResult(`1, ${name} no quedan galletas...`);
+        setDiceResult(`1 - ${name} no quedan galletas...`);
       }
     }
 
     if (randomNumber === 2) {
       if (eggs.length !== 0) {
         setEggs(eggs.slice(1));
-        setDiceResult(`2, ${name} descargas un huevo`);
+        setDiceResult(`2 - ${name} descargas un huevo`);
       } else {
-        setDiceResult(`2, ${name} no quedan huevos...`);
+        setDiceResult(`2 - ${name} no quedan huevos...`);
       }
     }
 
     if (randomNumber === 3) {
       if (frogs.length !== 0) {
         setFrogs(frogs.slice(1));
-        setDiceResult(`3, ${name} descargas una rana`);
+        setDiceResult(`3 - ${name} descargas una rana`);
       } else {
-        setDiceResult(`3, ${name} no quedan ranas...`);
+        setDiceResult(`3 - ${name} no quedan ranas...`);
       }
     }
   };
@@ -61,7 +61,7 @@ function App() {
     setCookies(['🍪', '🍪', '🍪']);
     setEggs(['🥚', '🥚', '🥚']);
     setFrogs(['🐸', '🐸', '🐸']);
-    setDiceResult('Resultado:');
+    setDiceResult('Mercancías:');
     setStateGame('Inicio');
     setTimeout(() => {
       setStateGame('Inicio');
@@ -76,14 +76,14 @@ function App() {
 
   useEffect(() => {
     if (cookies.length === 0 && eggs.length === 0 && frogs.length === 0) {
-      setDiceResult('');
+      setDiceResult('Mercancías:');
       setStateGame('Has ganado!!!');
     }
   }, [cookies.length, eggs.length, frogs.length]);
 
   useEffect(() => {
     if (positionGrogu === 6) {
-      setDiceResult('');
+      setDiceResult('Mercancías:');
       setStateGame(`Has perdido...`);
     }
   }, [positionGrogu]);
