@@ -14,7 +14,7 @@ function App() {
   const [cookies, setCookies] = useState(['🍪', '🍪', '🍪']);
   const [eggs, setEggs] = useState(['🥚', '🥚', '🥚']);
   const [frogs, setFrogs] = useState(['🐸', '🐸', '🐸']);
-  const [diceResult, setDiceResult] = useState('');
+  const [diceResult, setDiceResult] = useState('Resultado:');
   const [stateGame, setStateGame] = useState('Inicio');
 
   const handleSetName = (value) => {
@@ -26,33 +26,33 @@ function App() {
 
     if (randomNumber === 4) {
       setGroguPosition(positionGrogu + 1);
-      setDiceResult(`4, Grogu ha avanzado una casilla`);
+      setDiceResult(`4, Grogu avanza una casilla`);
     }
 
     if (randomNumber === 1) {
       if (cookies.length !== 0) {
         setCookies(cookies.slice(1));
-        setDiceResult(`1, ${name} has descargado una galleta`);
+        setDiceResult(`1, ${name} descargas una galleta`);
       } else {
-        setDiceResult(`1, ${name} lo siento, no quedan galletas...`);
+        setDiceResult(`1, ${name} no quedan galletas...`);
       }
     }
 
     if (randomNumber === 2) {
       if (eggs.length !== 0) {
         setEggs(eggs.slice(1));
-        setDiceResult(`2, ${name} has descargado un huevo`);
+        setDiceResult(`2, ${name} descargas un huevo`);
       } else {
-        setDiceResult(`2, ${name} lo siento, no quedan huevos...`);
+        setDiceResult(`2, ${name} no quedan huevos...`);
       }
     }
 
     if (randomNumber === 3) {
       if (frogs.length !== 0) {
         setFrogs(frogs.slice(1));
-        setDiceResult(`3, ${name} has descargado una rana`);
+        setDiceResult(`3, ${name} descargas una rana`);
       } else {
-        setDiceResult(`3, ${name} lo siento, no quedan ranas...`);
+        setDiceResult(`3, ${name} no quedan ranas...`);
       }
     }
   };
@@ -83,7 +83,7 @@ function App() {
     setCookies(['🍪', '🍪', '🍪']);
     setEggs(['🥚', '🥚', '🥚']);
     setFrogs(['🐸', '🐸', '🐸']);
-    setDiceResult('');
+    setDiceResult('Resultado:');
     setStateGame('Inicio');
   };
 
@@ -102,7 +102,7 @@ function App() {
               <Link to="/instructions">Instrucciones</Link>
             </li>
             <li>
-              <Link to="/game">A jugar</Link>
+              <Link to="/game">Jugar</Link>
             </li>
           </ul>
         </main>

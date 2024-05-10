@@ -8,7 +8,13 @@ function Form({ name, handleSetName }) {
   return (
     <form action="">
       <label htmlFor="name">Introduce tu nombre</label>
-      <input type="text" id="name" value={name} onChange={handleChangeSetName} />
+      <input
+        type="text"
+        id="name"
+        placeholder="Nombre..."
+        value={name}
+        onChange={handleChangeSetName}
+      />
     </form>
   );
 }

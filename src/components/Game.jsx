@@ -17,9 +17,9 @@ function Game({
   handleReset,
 }) {
   return (
-    <div className="page">
-      <Board className="gameElements1" positionGrogu={positionGrogu} />
-      <div className="gameElements2">
+    <div className="game">
+      <Board className="gameBoard" positionGrogu={positionGrogu} />
+      <div className="gameElements">
         <Form handleSetName={handleSetName} />
         <div>{diceResult}</div>
         <Dice handleRollDice={handleRollDice} stateGame={stateGame} />

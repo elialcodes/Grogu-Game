@@ -10,37 +10,44 @@ html {
     height: 100vh;
 
     .imageContainer {
-      width: 50%;
+      width: 60%;
       height: 100vh;
       background: url('../images/grogu-vertical.jpeg') no-repeat;
       background-size: 120% 100vh;
     }
 
     .noImageContainer {
-      width: 50%;
+      width: 40%;
       height: 100vh;
       background-color: #999;
-    }
 
-    .menu {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-
-      a {
-        text-decoration: none;
+      .page {
+        background-color: #999;
+        padding: 4vh 5%;
         color: white;
-        font-size: 30px;
-        line-height: 50px;
       }
-    }
-    .welcome,
-    .instructions {
-      font-size: 22px;
-      line-height: 40px;
-      color: white;
-      padding: 2vh 50px;
+
+      .menu {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 5%;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 20px;
+          line-height: 50px;
+        }
+      }
+
+      .welcome,
+      .instructions {
+        font-size: 20px;
+        line-height: 40px;
+        color: white;
+        padding: 2vh 50px;
+      }
     }
   }
 }
