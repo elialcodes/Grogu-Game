@@ -69,7 +69,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (positionGrogu < 6 || cookies.length !== 3 || eggs.length !== 3 || frogs.length !== 3) {
+    if (positionGrogu !== 0 || cookies.length !== 3 || eggs.length !== 3 || frogs.length !== 3) {
       setStateGame('En curso');
     }
   }, [cookies.length, eggs.length, frogs.length, positionGrogu]);
