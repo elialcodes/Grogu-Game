@@ -1,9 +1,11 @@
 .title {
   width: 100%;
   padding: 4vh 0 2vh 0;
+
   @media (max-width: 1023px) {
     padding: 3vh 0;
   }
+
   @media (max-width: 767px) {
     padding: 2vh 0;
   }
@@ -13,6 +15,7 @@
     font-size: 2.5rem;
     text-shadow: 2px 2px 5px #000;
     text-align: center;
+
     @media (max-width: 767px) {
       font-size: 1.5rem;
     }

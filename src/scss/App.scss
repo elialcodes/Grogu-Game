@@ -22,19 +22,18 @@ html {
 
       @media (max-width: 1023px) {
         width: 100%;
-        height: 35vh;
+        height: 30vh;
         border-right: none;
         border-bottom: 10px solid black;
         background: url('../images/grogu.webp') no-repeat;
         background-size: cover;
         background-position: center;
+        img {
+          display: none;
+        }
 
         @media (max-width: 767px) {
           height: 25vh;
-        }
-
-        img {
-          display: none;
         }
       }
     }
@@ -42,11 +41,10 @@ html {
     .noImageContainer {
       height: 100vh;
       margin: auto;
-      background-color: rgb(49, 177, 130);
 
       @media (max-width: 1023px) {
         width: 100%;
-        height: 65vh;
+        height: 70vh;
         border-right: none;
       }
       @media (max-width: 767px) {
@@ -73,7 +71,7 @@ html {
             color: white;
             font-size: 20px;
             @media (max-width: 1023px) {
-              font-size: 20px;
+              font-size: 22px;
             }
             @media (max-width: 767px) {
               font-size: 17px;
