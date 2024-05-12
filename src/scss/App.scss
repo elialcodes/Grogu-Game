@@ -72,7 +72,11 @@ html {
           a {
             text-decoration: none;
             color: white;
-            font-size: 20px;
+            font-size: 22px;
+
+            @media (max-width: 1100px) {
+              font-size: 17px;
+            }
 
             @media (max-width: 1023px) {
               font-size: 22px;
@@ -88,13 +92,21 @@ html {
       .welcome,
       .instructions {
         font-size: 20px;
-        line-height: 40px;
+        line-height: 32px;
         color: white;
         padding: 2vh 50px;
+
+        @media (max-width: 1100px) {
+          font-size: 17px;
+          line-height: 30px;
+          padding: 2vh 30px;
+        }
+
         @media (max-width: 1023px) {
           font-size: 18px;
           line-height: 30px;
         }
+
         @media (max-width: 767px) {
           font-size: 15px;
           line-height: 25px;
