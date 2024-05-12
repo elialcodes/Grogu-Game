@@ -28,6 +28,7 @@ html {
         background: url('../images/grogu.webp') no-repeat;
         background-size: cover;
         background-position: center;
+
         img {
           display: none;
         }
@@ -47,6 +48,7 @@ html {
         height: 70vh;
         border-right: none;
       }
+
       @media (max-width: 767px) {
         height: 75vh;
       }
@@ -54,6 +56,7 @@ html {
       .page {
         padding: 4vh 5%;
         color: white;
+
         @media (max-width: 1023px) {
           width: 100%;
           padding: 2vh 5%;
@@ -70,9 +73,11 @@ html {
             text-decoration: none;
             color: white;
             font-size: 20px;
+
             @media (max-width: 1023px) {
               font-size: 22px;
             }
+
             @media (max-width: 767px) {
               font-size: 17px;
             }
