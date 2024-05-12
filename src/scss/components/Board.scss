@@ -21,6 +21,10 @@
       background: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(10px);
       border: lightgrey 0.2px solid;
+      @media (max-width: 767px) {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     @keyframes bounce {

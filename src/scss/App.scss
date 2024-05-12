@@ -19,25 +19,29 @@ html {
       img {
         height: 100vh;
       }
-      // background: url('../images/grogu-vertical.jpeg') no-repeat;
-      // background-size: 120% 100vh;
+
       @media (max-width: 1023px) {
         width: 100%;
-        height: 40vh;
-        background: url('../images/grogu.webp') no-repeat;
-        background-size: 100%;
+        height: 50vh;
+        border-right: none;
         border-bottom: 10px solid black;
+        background: url('../images/grogu.webp') no-repeat;
+        background-size: cover;
+        background-position: center;
+        img {
+          display: none;
+        }
       }
     }
 
     .noImageContainer {
-      // width: 50%;
       height: 100vh;
       margin: auto;
       background-color: rgb(49, 177, 130);
 
       @media (max-width: 1023px) {
         width: 100%;
+        height: auto;
         border-right: none;
       }
 
@@ -63,6 +67,9 @@ html {
             @media (max-width: 1023px) {
               font-size: 20px;
             }
+            @media (max-width: 767px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -76,6 +83,9 @@ html {
         @media (max-width: 1023px) {
           font-size: 18px;
           line-height: 30px;
+        }
+        @media (max-width: 767px) {
+          font-size: 17px;
         }
       }
     }
