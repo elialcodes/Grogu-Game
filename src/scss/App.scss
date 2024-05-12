@@ -12,11 +12,15 @@ html {
     @media (max-width: 1023px) {
       flex-direction: column;
     }
+
     .imageContainer {
-      width: 50%;
       height: 100vh;
-      background: url('../images/grogu-vertical.jpeg') no-repeat;
-      background-size: 120% 100vh;
+      border-right: 10px solid black;
+      img {
+        height: 100vh;
+      }
+      // background: url('../images/grogu-vertical.jpeg') no-repeat;
+      // background-size: 120% 100vh;
       @media (max-width: 1023px) {
         width: 100%;
         height: 40vh;
@@ -27,12 +31,14 @@ html {
     }
 
     .noImageContainer {
-      width: 50%;
+      // width: 50%;
+      height: 100vh;
+      margin: auto;
       background-color: rgb(49, 177, 130);
-      border-left: 10px solid black;
+
       @media (max-width: 1023px) {
         width: 100%;
-        border-left: none;
+        border-right: none;
       }
 
       .page {

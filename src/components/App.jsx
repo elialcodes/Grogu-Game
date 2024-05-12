@@ -5,6 +5,7 @@ import Header from './Header';
 import Game from './Game';
 import Welcome from './Welcome';
 import Instructions from './Instructions';
+import GroguV from '../images/grogu-vertical.jpeg';
 
 function App() {
   const [name, setName] = useState('');
@@ -90,7 +91,9 @@ function App() {
 
   return (
     <div className="mainContainer">
-      <div className="imageContainer"></div>
+      <div className="imageContainer">
+        <img src={GroguV} alt="" />
+      </div>
       <div className="noImageContainer">
         <Header name={name} />
         <main className="page">
