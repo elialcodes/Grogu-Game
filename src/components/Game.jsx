@@ -27,7 +27,7 @@ function Game({
           <Dice handleRollDice={handleRollDice} stateGame={stateGame} />
           <GameStatus stateGame={stateGame} />
         </div>
-        <div>{diceResult}</div>
+        <div className="diceResult">{diceResult}</div>
         <div className="goods-count">
           <section className="goods-container">
             <div className="goods-item">{cookies}</div>

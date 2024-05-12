@@ -10,6 +10,9 @@
     gap: 2vh;
     align-items: center;
     text-align: center;
+    @media (max-width: 767px) {
+      gap: 1vh;
+    }
 
     form {
       display: flex;
@@ -17,6 +20,10 @@
       align-items: center;
       gap: 1vh;
       margin-bottom: 2vh;
+      @media (max-width: 767px) {
+        font-size: 14px;
+        margin-bottom: 1vh;
+      }
 
       input {
         width: 100%;
@@ -26,7 +33,7 @@
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         font-size: 16px;
         @media (max-width: 767px) {
-          font-size: 14px;
+          font-size: 13px;
         }
       }
 
@@ -70,6 +77,12 @@
       transform: scale(1.1);
     }
 
+    .diceResult {
+      @media (max-width: 767px) {
+        font-size: 15px;
+      }
+    }
+
     .goods-count {
       display: flex;
       flex-direction: column;
@@ -79,6 +92,7 @@
       padding: 10px;
       @media (max-width: 767px) {
         height: auto;
+        gap: 1vh;
       }
 
       .goods-container {
