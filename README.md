@@ -1,4 +1,4 @@
-## Grogu Game :alien: :rocket: 🪐 :dizzy: :frog: :milky_way: :clapper: 
+## Grogu Game :rocket: 🪐 :dizzy: :frog: :clapper: 
 
 
 Let's play with Grogu!
@@ -30,7 +30,7 @@ User experience has been thought about, that's why the web application has some 
   
 ## Tech Stack 📚
 
-- Frontend: HTML, CSS, JavaScript and React.
+HTML, SASS, JavaScript and React.
   
 
 ## Installation 💻 
