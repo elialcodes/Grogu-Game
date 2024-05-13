@@ -6,10 +6,10 @@ Welcome to this easy and simple game inspired by The Mandalorian series where yo
 
 To do this, roll the dice to get a random number from 1 to 4 and you will unload the food while Grogu advances, you will have to be faster than him!
 Results:
-1: you will unload 1 cookie
-2: you will unload 1 egg
-3: you will unload 1 frog
-4: Grogu will advance 1 square
+- 1: you will unload 1 cookie
+- 2: you will unload 1 egg
+- 3: you will unload 1 frog
+- 4: Grogu will advance 1 square
 
 
 ## Features :star:
